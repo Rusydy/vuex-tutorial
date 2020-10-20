@@ -5,16 +5,21 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
 import Todo from "./Todo"
 
 export default {
     components: {
         Todo,
     },
+
     computed: {
-        todos() {
-            return this.$store.state.todos
-        }
+        // todos() {
+        //     return this.$store.state.todos
+        // }
+        ...mapState({
+            todos: "todos"
+        })
     }
 }
 </script>

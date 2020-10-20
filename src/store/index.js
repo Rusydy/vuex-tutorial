@@ -15,7 +15,7 @@ export default new Vuex.Store({
       }).length
     },
 
-    panddingTodos(state) {
+    pendingTodos(state) {
       return state.todos.filter( todo => {
         return todo.completed === false
       }).length
